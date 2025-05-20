@@ -11,15 +11,15 @@ const FunFactsSection: React.FC = () => {
   const funFacts = [
     {
       text: "O primeiro vibrador foi criado no século XIX como instrumento médico!",
-      icon: "/images/cartoon-surprised.png",
+      icon: "/images/primeiro-vibra.webp",
     },
     {
       text: "Casais que experimentam brinquedos juntos reportam maior satisfação no relacionamento",
-      icon: "/images/cartoon-hearts.png",
+      icon: "/images/casair-que-expe.webp",
     },
     {
       text: "Os antigos egípcios já usavam óleos aromáticos para momentos íntimos",
-      icon: "/images/cartoon-lollipop.png",
+      icon: "/images/os-antigos-egp.webp",
     },
   ];
 
@@ -44,16 +44,20 @@ const FunFactsSection: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: index * 0.2, duration: 0.5 }}
-              className="bg-pink-50 rounded-xl p-6 border-2 border-pink-100"
+              className="bg-pink-50 rounded-xl p-6 border-2 border-pink-100 shadow-md hover:shadow-lg transition-all duration-300"
               whileHover={{ y: -5 }}
             >
               <div className="flex flex-col items-center text-center">
-                <img
-                  src={fact.icon}
-                  alt="Fun fact icon"
-                  className="w-16 h-16 mb-4"
-                />
-                <p className="text-gray-700 text-lg">{fact.text}</p>
+                <div className="w-40 h-40 mb-6 rounded-full overflow-hidden bg-white shadow-sm ">
+                  <img
+                    src={fact.icon}
+                    alt="Fun fact icon"
+                    width={100}
+                    height={100}
+                    className="w-full h-full object-cover rounded-full transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
+                <p className="text-gray-700 text-lg font-medium">{fact.text}</p>
               </div>
             </motion.div>
           ))}

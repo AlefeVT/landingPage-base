@@ -11,38 +11,34 @@ const ProductsSection: React.FC = () => {
 
   const products = [
     {
-      image:
-        "https://images.pexels.com/photos/6311562/pexels-photo-6311562.jpeg?auto=compress&cs=tinysrgb&w=600",
+      image: "/images/colecao-divertida.webp",
       name: "Coleção Divertida",
       description:
         "Produtos coloridos e divertidos para explorar novas sensações.",
       tag: "Novidade",
-      cartoon: "/images/cartoon-heart.png",
+      cartoon: "/images/colecao-divertida2.webp",
     },
     {
-      image:
-        "https://images.pexels.com/photos/4202924/pexels-photo-4202924.jpeg?auto=compress&cs=tinysrgb&w=600",
+      image: "/images/linha-bem-estar.webp",
       name: "Linha Bem-Estar",
       description:
         "Produtos que promovem autoconhecimento e momentos de prazer.",
       tag: "Popular",
-      cartoon: "/images/cartoon-lips.png",
+      cartoon: "/images/linha-bem-estar2.webp",
     },
     {
-      image:
-        "https://images.pexels.com/photos/5938263/pexels-photo-5938263.jpeg?auto=compress&cs=tinysrgb&w=600",
+      image: "/images/ousados3.webp",
       name: "Acessórios Ousados",
       description: "Conjunto completo para experiências inesquecíveis a dois.",
       tag: "Exclusivo",
-      cartoon: "/images/cartoon-banana.png",
+      cartoon: "/images/ousados2.webp",
     },
     {
-      image:
-        "https://images.pexels.com/photos/6311558/pexels-photo-6311558.jpeg?auto=compress&cs=tinysrgb&w=600",
+      image: "/images/colecao-premium.webp",
       name: "Coleção Premium",
       description: "As últimas novidades em produtos de alta qualidade.",
       tag: "Lançamento",
-      cartoon: "/images/cartoon-lollipop.png",
+      cartoon: "/images/colecao-premium2.webp",
     },
   ];
 
@@ -131,7 +127,7 @@ const ProductsSection: React.FC = () => {
                 </h3>
                 <p className="text-gray-600 mb-4">{product.description}</p>
                 <div className="flex items-center justify-between">
-                  <p className="text-[#d7df21] font-medium">Ver detalhes</p>
+                  {/* <p className="text-[#d7df21] font-medium">Ver detalhes</p> */}
                   <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
@@ -156,7 +152,7 @@ const ProductsSection: React.FC = () => {
           </p>
 
           <motion.a
-            href="https://wa.me/5511999999999"
+            href="https://wa.me/5542999640655"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-pink-500 hover:bg-pink-600 text-white font-semibold px-8 py-4 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300"

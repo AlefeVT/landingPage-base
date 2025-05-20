@@ -5,7 +5,7 @@ import { Menu, X } from "lucide-react";
 const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeItem, setActiveItem] = useState("about");
+  const [activeItem, setActiveItem] = useState("hero");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,7 +14,14 @@ const Navbar: React.FC = () => {
 
     // Handle section visibility to update active menu item
     const handleSectionVisibility = () => {
-      const sections = ["about", "products", "benefits", "testimonials", "faq"];
+      const sections = [
+        "hero",
+        "categories",
+        "products",
+        "funfacts",
+        "testimonials",
+        "faq",
+      ];
       const current = sections.find((section) => {
         const element = document.getElementById(section);
         if (element) {
@@ -37,13 +44,35 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
+  // Corrigindo os IDs para corresponder com as seções reais no App
   const menuItems = [
-    { id: "about", label: "Sobre" },
+    { id: "hero", label: "Sobre" },
+    { id: "categories", label: "Categorias" },
     { id: "products", label: "Produtos" },
-    { id: "benefits", label: "Benefícios" },
+    { id: "funfacts", label: "Curiosidades" },
     { id: "testimonials", label: "Depoimentos" },
     { id: "faq", label: "FAQ" },
   ];
+
+  // Função para rolar suavemente até a seção
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      // Fechando o menu móvel se estiver aberto
+      if (isMobileMenuOpen) {
+        setIsMobileMenuOpen(false);
+      }
+
+      // Adicionando comportamento de rolagem suave
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+
+      // Atualizando o item ativo
+      setActiveItem(id);
+    }
+  };
 
   return (
     <header
@@ -83,10 +112,9 @@ const Navbar: React.FC = () => {
             <div className="bg-[#d7df21] px-1 py-1 rounded-full shadow-sm">
               <div className="flex items-center space-x-1">
                 {menuItems.map((item) => (
-                  <a
+                  <button
                     key={item.id}
-                    href={`#${item.id}`}
-                    onClick={() => setActiveItem(item.id)}
+                    onClick={() => scrollToSection(item.id)}
                     className={`relative px-4 py-2 text-sm font-medium transition-all duration-200 rounded-full ${
                       activeItem === item.id
                         ? "text-gray-900"
@@ -114,7 +142,7 @@ const Navbar: React.FC = () => {
                     >
                       {item.label}
                     </span>
-                  </a>
+                  </button>
                 ))}
               </div>
             </div>
@@ -163,13 +191,9 @@ const Navbar: React.FC = () => {
 
                 <div className="flex-1 flex flex-col justify-center px-6 py-8 space-y-6 overflow-auto">
                   {menuItems.map((item) => (
-                    <motion.a
+                    <motion.button
                       key={item.id}
-                      href={`#${item.id}`}
-                      onClick={() => {
-                        setActiveItem(item.id);
-                        setIsMobileMenuOpen(false);
-                      }}
+                      onClick={() => scrollToSection(item.id)}
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.3 }}
@@ -180,18 +204,20 @@ const Navbar: React.FC = () => {
                       }`}
                     >
                       {item.label}
-                    </motion.a>
+                    </motion.button>
                   ))}
                 </div>
 
                 <div className="p-6 border-t">
-                  <a
-                    href="#contact"
-                    onClick={() => setIsMobileMenuOpen(false)}
+                  <button
+                    onClick={() => {
+                      scrollToSection("cta");
+                      setIsMobileMenuOpen(false);
+                    }}
                     className="bg-gradient-to-r from-pink-600 to-pink-500 text-white px-5 py-3 rounded-full shadow-md w-full flex items-center justify-center text-lg font-medium"
                   >
                     Contato
-                  </a>
+                  </button>
                 </div>
               </motion.div>
             )}

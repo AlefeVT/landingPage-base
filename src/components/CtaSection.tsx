@@ -115,7 +115,7 @@ const CtaSection: React.FC = () => {
           </motion.div>
 
           <motion.a
-            href="https://wa.me/5511999999999"
+            href="https://wa.me/5542999640655"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white text-xl font-semibold px-8 py-4 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300"

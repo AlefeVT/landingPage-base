@@ -12,28 +12,28 @@ const CategoriesSection: React.FC = () => {
     {
       title: "Prazer solo",
       description: "Produtos para momentos de autocuidado e prazer solo",
-      icon: "/images/cartoon-lollipop.png",
+      icon: "/images/prazer-solo.webp",
       color: "bg-pink-100 text-pink-600",
       hover: "hover:bg-pink-200",
     },
     {
       title: "Prazer a dois",
       description: "Itens divertidos para apimentar a relação a dois",
-      icon: "/images/cartoon-hearts.png",
+      icon: "/images/prazer-dois.webp",
       color: "bg-[#d7df21]/20 text-gray-800",
       hover: "hover:bg-[#d7df21]/30",
     },
     {
       title: "Cosméticos",
       description: "Óleos, lubrificantes e produtos para o corpo",
-      icon: "/images/cartoon-lips.png",
+      icon: "/images/cosmetico.webp",
       color: "bg-purple-100 text-purple-600",
       hover: "hover:bg-purple-200",
     },
     {
       title: "Lingeries",
       description: "Peças sensuais e confortáveis para todos os tipos de corpo",
-      icon: "/images/cartoon-heart.png",
+      icon: "/images/lingerie.webp",
       color: "bg-teal-100 text-teal-600",
       hover: "hover:bg-teal-200",
     },
@@ -63,19 +63,19 @@ const CategoriesSection: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className={`rounded-xl p-6 ${category.color} ${category.hover} transition-all duration-300 cursor-pointer`}
+              className={`rounded-xl p-6 ${category.color} ${category.hover} transition-all duration-300 cursor-pointer shadow-md hover:shadow-lg`}
               whileHover={{ y: -5, scale: 1.02 }}
             >
               <div className="flex flex-col items-center text-center">
-                <img
-                  src={category.icon}
-                  alt={category.title}
-                  className="w-20 h-20 mb-4"
-                />
-                <h3 className="text-xl font-bold mb-2 text-nowrap">
-                  {category.title}
-                </h3>
-                <p>{category.description}</p>
+                <div className="w-full h-48 mb-6 overflow-hidden rounded-lg">
+                  <img
+                    src={category.icon}
+                    alt={category.title}
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                  />
+                </div>
+                <h3 className="text-xl font-bold mb-2">{category.title}</h3>
+                <p className="text-sm">{category.description}</p>
               </div>
             </motion.div>
           ))}

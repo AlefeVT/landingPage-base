@@ -15,18 +15,32 @@ function App() {
     <div className="font-sans bg-neutral-900 text-neutral-100 overflow-x-hidden">
       <AnimatePresence>
         <Navbar />
-        <HeroSection />
-        <CategoriesSection />
-        <ProductsSection />
-        <FunFactsSection />
-        <TestimonialsSection />
-        <FaqSection />
-        <CustomCallToAction />
+        <div id="hero">
+          <HeroSection />
+        </div>
+        <div id="categories">
+          <CategoriesSection />
+        </div>
+        <div id="products">
+          <ProductsSection />
+        </div>
+        <div id="funfacts">
+          <FunFactsSection />
+        </div>
+        <div id="testimonials">
+          <TestimonialsSection />
+        </div>
+        <div id="faq">
+          <FaqSection />
+        </div>
+        <div id="cta">
+          <CustomCallToAction />
+        </div>
         <Footer />
 
         {/* Fixed WhatsApp Button */}
         <motion.a
-          href="https://wa.me/5511999999999"
+          href="https://wa.me/5542999640655"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-6 right-6 z-50 flex items-center justify-center bg-pink-500 hover:bg-pink-600 text-white p-4 rounded-full shadow-lg"

@@ -10,19 +10,13 @@ const TestimonialsSection: React.FC = () => {
 
   const testimonials = [
     {
-      text: "Atendimento super discreto e produtos de qualidade. Adorei a experiência de compra!",
-      name: "Cliente Satisfeita",
-      avatar: "/images/cartoon-heart-pink.png",
+      avatar: "/images/feedback1.webp",
     },
     {
-      text: "Produtos exatamente como descritos e a entrega foi super rápida. Recomendo!",
-      name: "Cliente Feliz",
-      avatar: "/images/cartoon-heart-purple.png",
+      avatar: "/images/feedback2.webp",
     },
     {
-      text: "A consultoria foi incrível! Me ajudaram a escolher os produtos perfeitos.",
-      name: "Cliente Encantada",
-      avatar: "/images/cartoon-heart-teal.png",
+      avatar: "/images/feedback3.webp",
     },
   ];
 
@@ -75,27 +69,18 @@ const TestimonialsSection: React.FC = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-white p-8 rounded-xl shadow-lg relative"
-              whileHover={{ y: -5, transition: { duration: 0.2 } }}
+              className="bg-black rounded-xl shadow-lg h-64 overflow-hidden"
+              whileHover={{
+                y: -5,
+                transition: { duration: 0.3 },
+              }}
             >
-              <div className="absolute -top-10 left-1/2 transform -translate-x-1/2">
+              <div className="flex items-center justify-center h-full w-full">
                 <img
                   src={testimonial.avatar}
-                  alt="Avatar"
-                  className="w-20 h-20"
+                  alt="Depoimento de cliente"
+                  className="w-full object-contain"
                 />
-              </div>
-
-              <div className="pt-10 mb-6">
-                <p className="text-gray-700 relative z-10">
-                  {testimonial.text}
-                </p>
-              </div>
-
-              <div className="flex items-center justify-center">
-                <span className="font-medium text-pink-600">
-                  {testimonial.name}
-                </span>
               </div>
             </motion.div>
           ))}

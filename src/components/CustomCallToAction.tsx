@@ -47,7 +47,7 @@ const CustomCallToAction: React.FC = () => {
         >
           <div className="flex justify-center mb-6">
             <img
-              src="/images/cartoon-bomb-kiss.png"
+              src="/images/labios.png"
               alt="Bomb Kiss"
               className="w-24 h-24"
             />
@@ -73,7 +73,7 @@ const CustomCallToAction: React.FC = () => {
 
           <div className="flex flex-wrap justify-center gap-4">
             <motion.a
-              href="https://wa.me/5511999999999"
+              href="https://wa.me/5542999640655"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-pink-500 hover:bg-pink-600 text-white text-lg font-semibold px-8 py-4 rounded-full shadow-lg"
@@ -83,22 +83,13 @@ const CustomCallToAction: React.FC = () => {
               <MessageCircle size={24} />
               Falar com consultor
             </motion.a>
-
-            <motion.a
-              href="/catalogo"
-              className="inline-flex items-center justify-center gap-2 bg-[#d7df21] hover:bg-[#c3ca1f] text-gray-800 text-lg font-semibold px-8 py-4 rounded-full shadow-lg"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Ver catálogo completo
-            </motion.a>
           </div>
         </motion.div>
       </div>
 
       {/* Fun cartoon elements */}
       <motion.img
-        src="/images/cartoon-lips.png"
+        src="/images/pirulito.png"
         alt="Lips"
         className="absolute left-10 bottom-10 w-16 h-16 hidden md:block"
         animate={{
@@ -113,7 +104,7 @@ const CustomCallToAction: React.FC = () => {
       />
 
       <motion.img
-        src="/images/cartoon-lollipop.png"
+        src="/images/pirulito.png"
         alt="Lollipop"
         className="absolute right-10 bottom-10 w-16 h-16 hidden md:block"
         animate={{
