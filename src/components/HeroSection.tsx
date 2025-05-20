@@ -1,5 +1,5 @@
 import React from "react";
-import { MessageCircle, Instagram, ShoppingBag } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 const shapes = [
@@ -84,11 +84,11 @@ const HeroSection: React.FC = () => {
           transition={{ duration: 1, delay: 0.2 }}
           className="text-lg md:text-2xl mb-10 text-neutral-700 max-w-2xl mx-auto"
         >
-          Atendimento exclusivo pelo Whatsapp!
+          Quem sente, entende. Quem prova, vicia.
         </motion.p>
 
         <motion.a
-          href="https://wa.me/5542999640655"
+          href="https://wa.me/5542988742384"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-3 bg-pink-500 hover:bg-pink-600 text-white text-xl font-semibold px-10 py-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-pink-500"

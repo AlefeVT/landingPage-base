@@ -17,6 +17,7 @@ const ProductsSection: React.FC = () => {
         "Produtos coloridos e divertidos para explorar novas sensações.",
       tag: "Novidade",
       cartoon: "/images/colecao-divertida2.webp",
+      url: "https://bemmekiss.com.br/vibradores1/",
     },
     {
       image: "/images/linha-bem-estar.webp",
@@ -25,6 +26,7 @@ const ProductsSection: React.FC = () => {
         "Produtos que promovem autoconhecimento e momentos de prazer.",
       tag: "Popular",
       cartoon: "/images/linha-bem-estar2.webp",
+      url: "https://bemmekiss.com.br/farmacinha/",
     },
     {
       image: "/images/ousados3.webp",
@@ -32,6 +34,7 @@ const ProductsSection: React.FC = () => {
       description: "Conjunto completo para experiências inesquecíveis a dois.",
       tag: "Exclusivo",
       cartoon: "/images/ousados2.webp",
+      url: "https://bemmekiss.com.br/itens-bdsm/",
     },
     {
       image: "/images/colecao-premium.webp",
@@ -39,6 +42,7 @@ const ProductsSection: React.FC = () => {
       description: "As últimas novidades em produtos de alta qualidade.",
       tag: "Lançamento",
       cartoon: "/images/colecao-premium2.webp",
+      url: "https://bemmekiss.com.br/excitantes/",
     },
   ];
 
@@ -89,55 +93,62 @@ const ProductsSection: React.FC = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
           {products.map((product, index) => (
-            <motion.div
+            <a
+              href={product.url}
               key={index}
-              variants={itemVariants}
-              className="group relative bg-white rounded-xl overflow-hidden shadow-lg border-2 border-pink-100"
-              whileHover={{ y: -5 }}
+              className="block"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
-                />
-
-                {/* Cartoon overlay on hover */}
-                <div className="absolute inset-0 bg-white/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <motion.div
+                variants={itemVariants}
+                className="group relative bg-white rounded-xl overflow-hidden shadow-lg border-2 border-pink-100"
+                whileHover={{ y: -5 }}
+              >
+                <div className="relative h-64 overflow-hidden">
                   <img
-                    src={product.cartoon}
-                    alt="Cartoon"
-                    className="w-32 h-32"
+                    src={product.image}
+                    alt={product.name}
+                    className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
                   />
-                </div>
 
-                <motion.div
-                  className="absolute top-4 left-4 bg-[#d7df21] text-gray-800 text-sm font-medium px-3 py-1 rounded-full"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2 }}
-                >
-                  {product.tag}
-                </motion.div>
-              </div>
+                  {/* Cartoon overlay on hover */}
+                  <div className="absolute inset-0 bg-white/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <img
+                      src={product.cartoon}
+                      alt="Cartoon"
+                      className="w-32 h-32"
+                    />
+                  </div>
 
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-pink-600 group-hover:text-[#d7df21] transition-colors">
-                  {product.name}
-                </h3>
-                <p className="text-gray-600 mb-4">{product.description}</p>
-                <div className="flex items-center justify-between">
-                  {/* <p className="text-[#d7df21] font-medium">Ver detalhes</p> */}
-                  <motion.button
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="text-pink-400 hover:text-pink-300"
+                  <motion.div
+                    className="absolute top-4 left-4 bg-[#d7df21] text-gray-800 text-sm font-medium px-3 py-1 rounded-full"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.2 }}
                   >
-                    <Heart size={20} />
-                  </motion.button>
+                    {product.tag}
+                  </motion.div>
                 </div>
-              </div>
-            </motion.div>
+
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold mb-2 text-pink-600 group-hover:text-[#d7df21] transition-colors">
+                    {product.name}
+                  </h3>
+                  <p className="text-gray-600 mb-4">{product.description}</p>
+                  <div className="flex items-center justify-between">
+                    <p className="text-[#d7df21] font-medium">Ver detalhes</p>
+                    <motion.button
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                      className="text-pink-400 hover:text-pink-300"
+                    >
+                      <Heart size={20} />
+                    </motion.button>
+                  </div>
+                </div>
+              </motion.div>
+            </a>
           ))}
         </motion.div>
 
@@ -152,7 +163,7 @@ const ProductsSection: React.FC = () => {
           </p>
 
           <motion.a
-            href="https://wa.me/5542999640655"
+            href="https://wa.me/5542988742384"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-pink-500 hover:bg-pink-600 text-white font-semibold px-8 py-4 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300"

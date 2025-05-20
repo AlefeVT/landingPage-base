@@ -40,7 +40,7 @@ function App() {
 
         {/* Fixed WhatsApp Button */}
         <motion.a
-          href="https://wa.me/5542999640655"
+          href="https://wa.me/5542988742384"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-6 right-6 z-50 flex items-center justify-center bg-pink-500 hover:bg-pink-600 text-white p-4 rounded-full shadow-lg"

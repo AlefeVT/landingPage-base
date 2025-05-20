@@ -73,7 +73,7 @@ const CustomCallToAction: React.FC = () => {
 
           <div className="flex flex-wrap justify-center gap-4">
             <motion.a
-              href="https://wa.me/5542999640655"
+              href="https://wa.me/5542988742384"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-pink-500 hover:bg-pink-600 text-white text-lg font-semibold px-8 py-4 rounded-full shadow-lg"

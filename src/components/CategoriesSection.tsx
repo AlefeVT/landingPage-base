@@ -15,6 +15,7 @@ const CategoriesSection: React.FC = () => {
       icon: "/images/prazer-solo.webp",
       color: "bg-pink-100 text-pink-600",
       hover: "hover:bg-pink-200",
+      url: "https://bemmekiss.com.br/dicas-prazer-solo/",
     },
     {
       title: "Prazer a dois",
@@ -22,6 +23,7 @@ const CategoriesSection: React.FC = () => {
       icon: "/images/prazer-dois.webp",
       color: "bg-[#d7df21]/20 text-gray-800",
       hover: "hover:bg-[#d7df21]/30",
+      url: "http://bemmekiss.com.br/dica-prazer-a-dois/",
     },
     {
       title: "Cosméticos",
@@ -29,6 +31,7 @@ const CategoriesSection: React.FC = () => {
       icon: "/images/cosmetico.webp",
       color: "bg-purple-100 text-purple-600",
       hover: "hover:bg-purple-200",
+      url: "https://bemmekiss.com.br/lubrificantes/",
     },
     {
       title: "Lingeries",
@@ -36,6 +39,7 @@ const CategoriesSection: React.FC = () => {
       icon: "/images/lingerie.webp",
       color: "bg-teal-100 text-teal-600",
       hover: "hover:bg-teal-200",
+      url: "https://bemmekiss.com.br/fantasias/",
     },
   ];
 
@@ -58,26 +62,32 @@ const CategoriesSection: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {categories.map((category, index) => (
-            <motion.div
+            <a
+              href={category.url}
+              target="_blank"
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-              className={`rounded-xl p-6 ${category.color} ${category.hover} transition-all duration-300 cursor-pointer shadow-md hover:shadow-lg`}
-              whileHover={{ y: -5, scale: 1.02 }}
+              className="block"
             >
-              <div className="flex flex-col items-center text-center">
-                <div className="w-full h-48 mb-6 overflow-hidden rounded-lg">
-                  <img
-                    src={category.icon}
-                    alt={category.title}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                  />
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                className={`rounded-xl p-6 ${category.color} ${category.hover} transition-all duration-300 cursor-pointer shadow-md hover:shadow-lg`}
+                whileHover={{ y: -5, scale: 1.02 }}
+              >
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-full h-48 mb-6 overflow-hidden rounded-lg">
+                    <img
+                      src={category.icon}
+                      alt={category.title}
+                      className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">{category.title}</h3>
+                  <p className="text-sm">{category.description}</p>
                 </div>
-                <h3 className="text-xl font-bold mb-2">{category.title}</h3>
-                <p className="text-sm">{category.description}</p>
-              </div>
-            </motion.div>
+              </motion.div>
+            </a>
           ))}
         </div>
       </div>
