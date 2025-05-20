@@ -31,7 +31,7 @@ const ProductsSection: React.FC = () => {
     {
       image:
         "https://images.pexels.com/photos/5938263/pexels-photo-5938263.jpeg?auto=compress&cs=tinysrgb&w=600",
-      name: "Kit Diversão",
+      name: "Acessórios Ousados",
       description: "Conjunto completo para experiências inesquecíveis a dois.",
       tag: "Exclusivo",
       cartoon: "/images/cartoon-banana.png",
