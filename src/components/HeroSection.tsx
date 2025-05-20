@@ -13,7 +13,6 @@ const shapes = [
 const HeroSection: React.FC = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-neutral-900">
-      {/* Shapes animados */}
       {shapes.map((shape, i) => (
         <motion.div
           key={i}
@@ -35,7 +34,7 @@ const HeroSection: React.FC = () => {
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('/images/desenho4.jpeg')", // substitua por um pattern discreto
+          backgroundImage: "url('/images/desenho4.jpeg')",
           opacity: 0.06,
           backgroundSize: "350px",
         }}
@@ -63,13 +62,7 @@ const HeroSection: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="flex justify-center"
         >
-          <img
-            src="/logo.png"
-            alt="Logo"
-            height={150}
-            width={150}
-            className="h-80 w-80"
-          />
+          <img src="/logo.png" alt="Logo" height={150} width={450} />
         </motion.div>
 
         <motion.h1
@@ -91,9 +84,7 @@ const HeroSection: React.FC = () => {
           transition={{ duration: 1, delay: 0.2 }}
           className="text-lg md:text-2xl mb-10 text-neutral-700 max-w-2xl mx-auto"
         >
-          Atendimento exclusivo e gratuito pelo WhatsApp. Produtos selecionados,
-          dicas certeiras, muita leveza e total privacidade. Sinta-se à vontade
-          para explorar novidades e surpresas!
+          Atendimento exclusivo pelo Whatsapp!
         </motion.p>
 
         <motion.a

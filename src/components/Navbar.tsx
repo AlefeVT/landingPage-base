@@ -80,7 +80,7 @@ const Navbar: React.FC = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="hidden md:block"
           >
-            <div className="bg-gray-100 px-1 py-1 rounded-full shadow-sm">
+            <div className="bg-[#d7df21] px-1 py-1 rounded-full shadow-sm">
               <div className="flex items-center space-x-1">
                 {menuItems.map((item) => (
                   <a
@@ -96,7 +96,7 @@ const Navbar: React.FC = () => {
                     {activeItem === item.id && (
                       <motion.div
                         layoutId="activeBackground"
-                        className="absolute inset-0 bg-white rounded-full shadow-sm"
+                        className="absolute inset-0 bg-pink-500 rounded-full shadow-sm"
                         initial={false}
                         transition={{
                           type: "spring",
@@ -105,7 +105,15 @@ const Navbar: React.FC = () => {
                         }}
                       />
                     )}
-                    <span className="relative z-10">{item.label}</span>
+                    <span
+                      className={`relative z-10 transition-colors duration-200 ${
+                        activeItem === item.id
+                          ? "text-white"
+                          : "text-neutral-900"
+                      }`}
+                    >
+                      {item.label}
+                    </span>
                   </a>
                 ))}
               </div>

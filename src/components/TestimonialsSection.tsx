@@ -48,7 +48,7 @@ const TestimonialsSection: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-[#d7df21]/10" ref={ref}>
+    <section className="py-20 bg-slate-50" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

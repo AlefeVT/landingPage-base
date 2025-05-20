@@ -8,6 +8,7 @@ import CategoriesSection from "./components/CategoriesSection";
 import FunFactsSection from "./components/FunFactsSection";
 import CustomCallToAction from "./components/CustomCallToAction";
 import Navbar from "./components/Navbar";
+import FaqSection from "./components/FaqSection";
 
 function App() {
   return (
@@ -15,6 +16,12 @@ function App() {
       <AnimatePresence>
         <Navbar />
         <HeroSection />
+        <CategoriesSection />
+        <ProductsSection />
+        <FunFactsSection />
+        <TestimonialsSection />
+        <FaqSection />
+        <CustomCallToAction />
         <Footer />
 
         {/* Fixed WhatsApp Button */}

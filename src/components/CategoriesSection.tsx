@@ -10,14 +10,14 @@ const CategoriesSection: React.FC = () => {
 
   const categories = [
     {
-      title: "Para Solteiras",
+      title: "Prazer solo",
       description: "Produtos para momentos de autocuidado e prazer solo",
       icon: "/images/cartoon-lollipop.png",
       color: "bg-pink-100 text-pink-600",
       hover: "hover:bg-pink-200",
     },
     {
-      title: "Para Casais",
+      title: "Prazer a dois",
       description: "Itens divertidos para apimentar a relação a dois",
       icon: "/images/cartoon-hearts.png",
       color: "bg-[#d7df21]/20 text-gray-800",
@@ -72,7 +72,9 @@ const CategoriesSection: React.FC = () => {
                   alt={category.title}
                   className="w-20 h-20 mb-4"
                 />
-                <h3 className="text-xl font-bold mb-2">{category.title}</h3>
+                <h3 className="text-xl font-bold mb-2 text-nowrap">
+                  {category.title}
+                </h3>
                 <p>{category.description}</p>
               </div>
             </motion.div>

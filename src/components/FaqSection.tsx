@@ -40,7 +40,7 @@ const FaqSection: React.FC = () => {
   ];
 
   return (
-    <section className="py-20 bg-neutral-800" ref={ref}>
+    <section className="py-20 bg-pink-50" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -48,10 +48,10 @@ const FaqSection: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-pink-500">
             Dúvidas <span className="text-[#d7df21]">Frequentes</span>
           </h2>
-          <p className="text-neutral-300 max-w-2xl mx-auto">
+          <p className="text-neutral-600 max-w-2xl mx-auto">
             Encontre respostas para as principais dúvidas sobre nosso
             atendimento
           </p>
@@ -68,7 +68,7 @@ const FaqSection: React.FC = () => {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full flex items-center justify-between p-6 bg-neutral-900 rounded-xl text-left hover:bg-neutral-800 transition-colors duration-300"
+                className="w-full flex items-center justify-between p-6 bg-[#d7df21] rounded-xl text-left hover:bg-[#d7df21]/60 transition-colors duration-300"
               >
                 <span className="text-lg font-medium text-white">
                   {faq.question}
@@ -90,7 +90,7 @@ const FaqSection: React.FC = () => {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="p-6 bg-neutral-900/50 rounded-b-xl text-neutral-300">
+                    <div className="p-6 bg-[#d7df21]/20 rounded-b-xl text-neutral-700">
                       {faq.answer}
                     </div>
                   </motion.div>
