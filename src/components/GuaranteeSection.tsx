@@ -1,36 +1,40 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { ShieldCheck, Package, RefreshCw } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { ShieldCheck, Package, RefreshCw } from "lucide-react";
 
 const GuaranteeSection: React.FC = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.1,
   });
 
   const guarantees = [
     {
-      icon: <ShieldCheck className="w-16 h-16 text-rose-400" />,
+      icon: <ShieldCheck className="w-16 h-16 text-[#d7df21]" />,
       title: "Garantia de Satisfação",
-      description: "Se não ficar satisfeita, devolvemos seu dinheiro em até 7 dias."
+      description:
+        "Se não ficar satisfeita, devolvemos seu dinheiro em até 7 dias.",
     },
     {
-      icon: <Package className="w-16 h-16 text-rose-400" />,
+      icon: <Package className="w-16 h-16 text-[#d7df21]" />,
       title: "Produtos Originais",
-      description: "Todos os produtos são originais com garantia de fábrica."
+      description: "Todos os produtos são originais com garantia de fábrica.",
     },
     {
-      icon: <RefreshCw className="w-16 h-16 text-rose-400" />,
+      icon: <RefreshCw className="w-16 h-16 text-[#d7df21]" />,
       title: "Troca Garantida",
-      description: "Política de troca facilitada em caso de necessidade."
-    }
+      description: "Política de troca facilitada em caso de necessidade.",
+    },
   ];
 
   return (
-    <section className="py-20 bg-neutral-900 relative overflow-hidden" ref={ref}>
+    <section
+      className="py-20 bg-neutral-900 relative overflow-hidden"
+      ref={ref}
+    >
       <div className="absolute inset-0 bg-[url('https://images.pexels.com/photos/6311607/pexels-photo-6311607.jpeg?auto=compress&cs=tinysrgb&w=1920')] bg-cover bg-center opacity-10" />
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -39,7 +43,7 @@ const GuaranteeSection: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Compre com <span className="text-rose-400">Confiança</span>
+            Compre com <span className="text-[#d7df21]">Confiança</span>
           </h2>
           <p className="text-neutral-300 max-w-2xl mx-auto">
             Oferecemos as melhores garantias do mercado para sua total segurança
@@ -63,7 +67,9 @@ const GuaranteeSection: React.FC = () => {
               >
                 {guarantee.icon}
               </motion.div>
-              <h3 className="text-xl font-semibold mb-3 text-white">{guarantee.title}</h3>
+              <h3 className="text-xl font-semibold mb-3 text-white">
+                {guarantee.title}
+              </h3>
               <p className="text-neutral-300">{guarantee.description}</p>
             </motion.div>
           ))}
@@ -71,6 +77,6 @@ const GuaranteeSection: React.FC = () => {
       </div>
     </section>
   );
-}
+};
 
 export default GuaranteeSection;

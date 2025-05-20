@@ -1,35 +1,39 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { MessageCircle, Package, Truck, CreditCard } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { MessageCircle, Package, Truck, CreditCard } from "lucide-react";
 
 const HowItWorksSection: React.FC = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.1,
   });
 
   const steps = [
     {
-      icon: <MessageCircle className="w-12 h-12 text-rose-400" />,
+      icon: <MessageCircle className="w-12 h-12 text-[#d7df21]" />,
       title: "1. Inicie o Atendimento",
-      description: "Entre em contato via WhatsApp para um atendimento personalizado e discreto."
+      description:
+        "Entre em contato via WhatsApp para um atendimento personalizado e discreto.",
     },
     {
-      icon: <Package className="w-12 h-12 text-rose-400" />,
+      icon: <Package className="w-12 h-12 text-[#d7df21]" />,
       title: "2. Escolha seus Produtos",
-      description: "Receba recomendações exclusivas baseadas nas suas preferências."
+      description:
+        "Receba recomendações exclusivas baseadas nas suas preferências.",
     },
     {
-      icon: <CreditCard className="w-12 h-12 text-rose-400" />,
+      icon: <CreditCard className="w-12 h-12 text-[#d7df21]" />,
       title: "3. Pagamento Facilitado",
-      description: "Parcele em até 12x nos cartões ou escolha outro método de pagamento."
+      description:
+        "Parcele em até 12x nos cartões ou escolha outro método de pagamento.",
     },
     {
-      icon: <Truck className="w-12 h-12 text-rose-400" />,
+      icon: <Truck className="w-12 h-12 text-[#d7df21]" />,
       title: "4. Receba com Discrição",
-      description: "Entrega rápida e sigilosa em embalagem totalmente discreta."
-    }
+      description:
+        "Entrega rápida e sigilosa em embalagem totalmente discreta.",
+    },
   ];
 
   return (
@@ -42,7 +46,7 @@ const HowItWorksSection: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Como <span className="text-rose-400">Funciona</span>
+            Como <span className="text-[#d7df21]">Funciona</span>
           </h2>
           <p className="text-neutral-300 max-w-2xl mx-auto">
             Processo simples e discreto do início ao fim
@@ -66,7 +70,9 @@ const HowItWorksSection: React.FC = () => {
                 >
                   {step.icon}
                 </motion.div>
-                <h3 className="text-xl font-semibold mb-3 text-white">{step.title}</h3>
+                <h3 className="text-xl font-semibold mb-3 text-white">
+                  {step.title}
+                </h3>
                 <p className="text-neutral-300">{step.description}</p>
               </div>
             </motion.div>
@@ -75,6 +81,6 @@ const HowItWorksSection: React.FC = () => {
       </div>
     </section>
   );
-}
+};
 
 export default HowItWorksSection;

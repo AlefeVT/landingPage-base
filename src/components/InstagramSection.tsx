@@ -1,35 +1,39 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { Instagram, Heart } from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { Instagram, Heart } from "lucide-react";
 
 const InstagramSection: React.FC = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.1,
   });
 
   const posts = [
     {
-      image: "https://images.pexels.com/photos/6311558/pexels-photo-6311558.jpeg?auto=compress&cs=tinysrgb&w=600",
+      image:
+        "https://images.pexels.com/photos/6311558/pexels-photo-6311558.jpeg?auto=compress&cs=tinysrgb&w=600",
       likes: "1.2k",
-      caption: "Novidades chegando! 🔥"
+      caption: "Novidades chegando! 🔥",
     },
     {
-      image: "https://images.pexels.com/photos/6311562/pexels-photo-6311562.jpeg?auto=compress&cs=tinysrgb&w=600",
+      image:
+        "https://images.pexels.com/photos/6311562/pexels-photo-6311562.jpeg?auto=compress&cs=tinysrgb&w=600",
       likes: "987",
-      caption: "Coleção Premium 💫"
+      caption: "Coleção Premium 💫",
     },
     {
-      image: "https://images.pexels.com/photos/5938263/pexels-photo-5938263.jpeg?auto=compress&cs=tinysrgb&w=600",
+      image:
+        "https://images.pexels.com/photos/5938263/pexels-photo-5938263.jpeg?auto=compress&cs=tinysrgb&w=600",
       likes: "1.5k",
-      caption: "Lançamento especial ✨"
+      caption: "Lançamento especial ✨",
     },
     {
-      image: "https://images.pexels.com/photos/6311607/pexels-photo-6311607.jpeg?auto=compress&cs=tinysrgb&w=600",
+      image:
+        "https://images.pexels.com/photos/6311607/pexels-photo-6311607.jpeg?auto=compress&cs=tinysrgb&w=600",
       likes: "2.1k",
-      caption: "Exclusividade para você 💝"
-    }
+      caption: "Exclusividade para você 💝",
+    },
   ];
 
   return (
@@ -42,9 +46,9 @@ const InstagramSection: React.FC = () => {
           className="text-center mb-16"
         >
           <div className="flex items-center justify-center gap-2 mb-4">
-            <Instagram className="text-rose-400" size={32} />
+            <Instagram className="text-[#d7df21]" size={32} />
             <h2 className="text-3xl md:text-4xl font-bold text-white">
-              Siga no <span className="text-rose-400">Instagram</span>
+              Siga no <span className="text-[#d7df21]">Instagram</span>
             </h2>
           </div>
           <p className="text-neutral-300 max-w-2xl mx-auto">
@@ -71,7 +75,7 @@ const InstagramSection: React.FC = () => {
                 <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="text-white text-center">
                     <div className="flex items-center justify-center gap-2 mb-2">
-                      <Heart className="text-rose-400" size={20} />
+                      <Heart className="text-pink-400" size={20} />
                       <span>{post.likes}</span>
                     </div>
                     <p className="text-sm">{post.caption}</p>
@@ -101,6 +105,6 @@ const InstagramSection: React.FC = () => {
       </div>
     </section>
   );
-}
+};
 
 export default InstagramSection;

@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
-import { ChevronDown } from 'lucide-react';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { ChevronDown } from "lucide-react";
 
 const FaqSection: React.FC = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.1
+    threshold: 0.1,
   });
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -14,24 +14,29 @@ const FaqSection: React.FC = () => {
   const faqs = [
     {
       question: "Como funciona o atendimento personalizado?",
-      answer: "Nosso atendimento é feito exclusivamente via WhatsApp, onde você receberá atenção individual e recomendações personalizadas baseadas nas suas preferências."
+      answer:
+        "Nosso atendimento é feito exclusivamente via WhatsApp, onde você receberá atenção individual e recomendações personalizadas baseadas nas suas preferências.",
     },
     {
       question: "Como é feita a entrega dos produtos?",
-      answer: "Realizamos entregas para todo o Brasil em embalagens totalmente discretas, sem identificação do conteúdo ou da loja."
+      answer:
+        "Realizamos entregas para todo o Brasil em embalagens totalmente discretas, sem identificação do conteúdo ou da loja.",
     },
     {
       question: "Quais são as formas de pagamento?",
-      answer: "Aceitamos cartões de crédito em até 12x, PIX e transferência bancária. Todas as transações são seguras e discretas."
+      answer:
+        "Aceitamos cartões de crédito em até 12x, PIX e transferência bancária. Todas as transações são seguras e discretas.",
     },
     {
       question: "Os produtos têm garantia?",
-      answer: "Sim! Todos os produtos têm garantia contra defeitos e oferecemos política de troca em até 7 dias em caso de insatisfação."
+      answer:
+        "Sim! Todos os produtos têm garantia contra defeitos e oferecemos política de troca em até 7 dias em caso de insatisfação.",
     },
     {
       question: "Como garantem a discrição no atendimento?",
-      answer: "Todo o processo é sigiloso, desde o atendimento até a entrega. Suas informações são protegidas e nunca compartilhadas."
-    }
+      answer:
+        "Todo o processo é sigiloso, desde o atendimento até a entrega. Suas informações são protegidas e nunca compartilhadas.",
+    },
   ];
 
   return (
@@ -44,10 +49,11 @@ const FaqSection: React.FC = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Dúvidas <span className="text-rose-400">Frequentes</span>
+            Dúvidas <span className="text-[#d7df21]">Frequentes</span>
           </h2>
           <p className="text-neutral-300 max-w-2xl mx-auto">
-            Encontre respostas para as principais dúvidas sobre nosso atendimento
+            Encontre respostas para as principais dúvidas sobre nosso
+            atendimento
           </p>
         </motion.div>
 
@@ -64,15 +70,17 @@ const FaqSection: React.FC = () => {
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full flex items-center justify-between p-6 bg-neutral-900 rounded-xl text-left hover:bg-neutral-800 transition-colors duration-300"
               >
-                <span className="text-lg font-medium text-white">{faq.question}</span>
+                <span className="text-lg font-medium text-white">
+                  {faq.question}
+                </span>
                 <motion.div
                   animate={{ rotate: openIndex === index ? 180 : 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <ChevronDown className="text-rose-400" size={24} />
+                  <ChevronDown className="text-[#d7df21]" size={24} />
                 </motion.div>
               </button>
-              
+
               <AnimatePresence>
                 {openIndex === index && (
                   <motion.div
@@ -94,6 +102,6 @@ const FaqSection: React.FC = () => {
       </div>
     </section>
   );
-}
+};
 
 export default FaqSection;

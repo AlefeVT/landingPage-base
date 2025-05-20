@@ -1,3 +1,10 @@
+@font-face {
+  font-family: "Rolie Twily";
+  src: url("/Rolie Twily.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,9 +13,13 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply font-sans text-neutral-100 bg-neutral-900;
+  }
+
+  .font-rolie {
+    font-family: "Rolie Twily", serif;
   }
 }
 
