@@ -10,13 +10,18 @@ const TestimonialsSection: React.FC = () => {
 
   const testimonials = [
     {
-      avatar: "/images/feedback1.webp",
+      text: "Vou ficar gostosa demais, isso tudo graças a",
+      handle: "@bemmekiss",
     },
     {
-      avatar: "/images/feedback2.webp",
+      text: "hj eu comprei uns produtinhos na",
+      handle: "@bemmekiss",
+      additionalText: ", recomendo demais viu gente",
     },
     {
-      avatar: "/images/feedback3.webp",
+      text: "conjuntin d renda",
+      handle: "@bemmekiss",
+      additionalText: " eleva qualquer tipo d autoestima",
     },
   ];
 
@@ -69,18 +74,39 @@ const TestimonialsSection: React.FC = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="bg-black rounded-xl shadow-lg h-64 overflow-hidden"
+              className="bg-white rounded-xl shadow-lg overflow-hidden border border-pink-100"
               whileHover={{
                 y: -5,
+                boxShadow:
+                  "0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
                 transition: { duration: 0.3 },
               }}
             >
-              <div className="flex items-center justify-center h-full w-full">
-                <img
-                  src={testimonial.avatar}
-                  alt="Depoimento de cliente"
-                  className="w-full object-contain"
-                />
+              <div className="p-6">
+                <p className="text-gray-700 mb-3">
+                  {testimonial.text}{" "}
+                  <span className="text-pink-500 font-semibold">
+                    {testimonial.handle}
+                  </span>
+                  {testimonial.additionalText}
+                </p>
+                <div className="flex items-center">
+                  <svg className="w-5 h-5" fill="#FACC15" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg className="w-5 h-5" fill="#FACC15" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg className="w-5 h-5" fill="#FACC15" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg className="w-5 h-5" fill="#FACC15" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                  <svg className="w-5 h-5" fill="#FACC15" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                </div>
               </div>
             </motion.div>
           ))}
