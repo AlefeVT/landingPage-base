@@ -15,7 +15,7 @@ const CategoriesSection: React.FC = () => {
       icon: "/images/prazer-solo.webp",
       color: "bg-pink-100 text-pink-600",
       hover: "hover:bg-pink-200",
-      url: "https://bemmekiss.com.br/dicas-prazer-solo/",
+      url: "https://bemmekiss.com.br/dicas-solo/",
     },
     {
       title: "Prazer a dois",
@@ -23,7 +23,7 @@ const CategoriesSection: React.FC = () => {
       icon: "/images/prazer-dois.webp",
       color: "bg-[#d7df21]/20 text-gray-800",
       hover: "hover:bg-[#d7df21]/30",
-      url: "http://bemmekiss.com.br/dica-prazer-a-dois/",
+      url: "https://bemmekiss.com.br/dicas-a-dois/",
     },
     {
       title: "Cosméticos",
